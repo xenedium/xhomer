@@ -72,7 +72,7 @@ export function FeaturesCards({ services }: { services: Service[] }) {
       )
     }
     if (service.ports.length > 1) {
-      service.ports.map((port) => {
+      return service.ports.map((port) => {
         return (
           <Card key={`http://${service.ip}:${port.port}`} shadow="md" radius="md" className={classes.card} padding="xl" component="a" href={`http://${service.ip}:${port.port}`}>
             <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
